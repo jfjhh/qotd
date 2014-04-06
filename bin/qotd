@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'qotd'
+puts Qotd.colored_quote  # => A random colored quote.
+

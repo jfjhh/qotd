@@ -4,7 +4,6 @@ Displays a new quote upon every login to a Terminal.
 
 ## Todo
 
-- Figure out ruby executable that ships with gem.
 - Be sure it is installed on `sudo gem instal qotd`.
 - Be sure it can run with `ruby qotd` in `~/.bashrc`.
 
