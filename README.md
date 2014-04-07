@@ -1,10 +1,20 @@
-# Qotd
+# Qotd ~ Quote of the Day
 
-Displays a new colored quote upon every login to a Terminal.
+Displays a random formatted quote from a massive compilation of hilarious
+quotes.
+
+The output is formatted to always be spaced out to the 80th column, and the
+quote is displayed with reversed foreground / background colors.
+
+![screenshot](screenshot/screenshot.png)
+
+A big thanks to [textfiles.com](textfiles.com), where I got all the quotes.
+Without it, there would be no quote of the day. The reformatted file with all
+the quotes in it numbers over 3000 lines!
 
 ## Todo
 
-- Add more quotes to the file.
+- Publish on `rubygems.org`.
 
 ## Installation
 
@@ -18,13 +28,14 @@ And then execute:
 
 Or install it yourself as:
 
-    $ sudo gem install qotd   # Sudo may not be needed.
+    $ gem install qotd
 
 ## Usage
 
-Make it run the included executable in a shell config file.
+Add it to a shell configuration file.
 
-    # For example, in `~/.bashrc`.
+    # ~/.bashrc
+    # ...
     qotd
 
 ## Contributing

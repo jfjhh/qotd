@@ -5,6 +5,8 @@
 
 require 'qotd'
 
+puts "Quote of the Day:"
+
 if ARGV.first
   Qotd.format_quote(ARGV.first)
 else
