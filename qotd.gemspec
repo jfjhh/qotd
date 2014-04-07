@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["alex.striff1@gmail.com"]
   spec.summary       = "Displays a new quote on login to terminal."
   spec.description   = "Gets a random quote from a file and displays it to the standard output."
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/jfjhh/qotd"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

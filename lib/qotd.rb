@@ -1,4 +1,5 @@
 require_relative "qotd/version"
+require_relative "format"
 
 module Qotd
 
@@ -27,14 +28,17 @@ module Qotd
     "\033[0m" # => Reset to normal.
   end
 
-  def self.colored_quote(quote_str = self.quote)
-    "%s%s%s" % [
-      self.color,
-      quote_str,
-      self.clear
-    ]
-    # => A colored quote. Defaults to a random quote from the file but
-    # can also be passed a string.
+  def self.format_quote(quote)
+    message = Format.padding(quote, 2) # => Add padding to the quote.
+    space = ' ' * 80 # => Filler to highlight.
+
+    print self.color
+    puts space
+
+    puts message
+
+    puts space
+    print self.clear
   end
 
 end

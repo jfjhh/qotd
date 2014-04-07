@@ -1,5 +1,13 @@
 #!/usr/bin/env ruby
 
+# The first argument can be used as a quote to print, but if no arg is given,
+# print a random quote from the file.
+
 require 'qotd'
-puts Qotd.colored_quote  # => A random colored quote.
+
+if ARGV.first
+  Qotd.format_quote(ARGV.first)
+else
+  Qotd.format_quote(Qotd.quote)
+end
 

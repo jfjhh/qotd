@@ -1,4 +1,5 @@
-require_relative "../lib/qotd.rb"
+require_relative "../lib/qotd"
+require_relative "../lib/format"
 require "rspec"
 
 describe "Qotd" do
@@ -31,14 +32,20 @@ describe "Qotd" do
     Qotd.clear.should == "\033[0m"
   end
 
-  it "should return a colored quote" do
-    q = Qotd.quote
-    expected = "%s%s%s" % [
+  it "should return a formatted quote" do
+    quote = "Hello World!"
+    space = ' ' * 80 # => Filler to highlight.
+    message = Format.padding(quote, 2) # => Add padding to the quote.
+
+    expected = "%s%s%s%s%s" % [
       Qotd.color,
-      q,
-      Qotd.clear
+      space,
+      message,
+      space,
+      Qotd.clear,
     ]
-    Qotd.colored_quote(q).should == expected
+
+    Qotd.format_quote(quote).should == expected
   end
 
 end
