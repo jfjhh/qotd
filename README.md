@@ -4,7 +4,7 @@ Displays a new colored quote upon every login to a Terminal.
 
 ## Todo
 
-- Put it up on the web.
+- Add more quotes to the file.
 
 ## Installation
 
