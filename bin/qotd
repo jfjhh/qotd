@@ -7,9 +7,14 @@ require 'qotd'
 
 puts "Quote of the Day:"
 
+quote = []
 if ARGV.first
-  Qotd.format_quote(ARGV.first)
+  quote = Qotd.format_quote(ARGV.first)
 else
-  Qotd.format_quote(Qotd.quote)
+  quote = puts Qotd.format_quote(Qotd.quote)
 end
+
+print "#{quote[0]}"
+puts "%s\n%s\n%s\n" % quote[(1..3)]
+print "%s" % quote[4]
 
