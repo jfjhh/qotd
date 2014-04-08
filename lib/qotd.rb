@@ -28,18 +28,5 @@ module Qotd
     "\033[0m" # => Reset to normal.
   end
 
-  def self.format_quote(quote)
-    message = Format.padding(quote, 2) # => Add padding to the quote.
-    space = ' ' * 80 # => Filler to highlight.
-
-    "%s%s%s%s%s" % [
-      self.color,
-      space,
-      message,
-      space,
-      self.clear,
-    ]
-  end
-
 end
 

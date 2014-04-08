@@ -5,7 +5,8 @@ require "rspec"
 describe "Qotd" do
 
   it "should return the quotes file" do
-    file = File.read(File.join(File.dirname(File.dirname(__FILE__)), "lib/quotes/quotes.txt"))
+    dir = File.dirname(File.dirname(__FILE__))
+    file = File.read(File.join(dir, "lib/quotes/quotes.txt"))
     Qotd.quote_file.should == file
   end
 
@@ -45,7 +46,7 @@ describe "Qotd" do
       Qotd.clear,
     ]
 
-    Qotd.format_quote(quote).should == expected
+    Format.format_quote(quote).should == expected
   end
 
 end

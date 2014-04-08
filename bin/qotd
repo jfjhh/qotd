@@ -9,9 +9,9 @@ puts "Quote of the Day:"
 
 quote = []
 if ARGV.first
-  quote = Qotd.format_quote(ARGV.first)
+  quote = Format.format_quote(ARGV.first)
 else
-  quote = puts Qotd.format_quote(Qotd.quote)
+  quote = puts Format.format_quote(Qotd.quote)
 end
 
 print "#{quote[0]}"

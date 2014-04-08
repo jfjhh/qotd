@@ -27,6 +27,14 @@ describe "Format" do
     Format.padding(multi_line_str).should == expected << Format.to_80(expected)
   end
 
+  it "should return an array of a quote" do
+    Format.to_array(str).should == [str]
+  end
+
+  it "should return an array of lines in a multi_line quote" do
+    Format.to_array(multi_line_str).should == multi_line_str.split(/\n/)
+  end
+
   it "should add multiple spaces and padding to a multi-line string" do
     expected = "%s%s%s" % [
       "  Foo  " << Format.to_80("  Foo  ") << "\n",

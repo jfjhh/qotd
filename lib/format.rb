@@ -1,3 +1,5 @@
+require_relative "qotd"
+
 module Format
 
   def self.space(str, spaces = 1)
@@ -21,21 +23,38 @@ module Format
     return padding
   end
 
-  def self.padding(str, spaces = 1)
-    lines = str.split(/\n/)
+  def self.to_array(quote)
+    quote.split(/\n/)
+  end
 
-    if lines.length > 1
+  def self.format_quote(quote)
+    message = self.padding(quote, 2) # => Add padding to the quote.
+    space = ' ' * 80 # => Filler to highlight.
+
+    "%s%s%s%s%s" % [
+      Qotd.color,
+      space,
+      message,
+      space,
+      Qotd.clear,
+    ]
+  end
+
+  def self.padding(str, spaces = 1)
+    qarray = self.to_array(str)
+
+    if qarray.length > 1
       pstr = ""
-      last = lines.length - 1
+      last = qarray.length - 1
 
       (0...last).each do |line|
-        text = self.space(lines[line], spaces) 
+        text = self.space(qarray[line], spaces) 
         filler = self.to_80(text)
 
         pstr << text << filler << "\n"
       end
 
-      text = self.space(lines[last], spaces)
+      text = self.space(qarray[last], spaces)
       pstr << text << self.to_80(text)
 
       return pstr
