@@ -14,9 +14,7 @@ the quotes in it numbers over 3000 lines!
 
 ## Todo
 
-- Make a method that returns a quotes array.
-- Make a method that returns the same formatted array as before.
-    - Test each of them.
+- Qotd Sinatra application that periodically refreshes to display a quote.
 
 ## Installation
 
