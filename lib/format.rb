@@ -31,7 +31,7 @@ module Format
     message = self.padding(quote, 2) # => Add padding to the quote.
     space = ' ' * 80 # => Filler to highlight.
 
-    "%s%s%s%s%s" % [
+    [
       Qotd.color,
       space,
       message,

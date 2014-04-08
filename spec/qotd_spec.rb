@@ -38,7 +38,7 @@ describe "Qotd" do
     space = ' ' * 80 # => Filler to highlight.
     message = Format.padding(quote, 2) # => Add padding to the quote.
 
-    expected = "%s%s%s%s%s" % [
+    expected = [
       Qotd.color,
       space,
       message,
