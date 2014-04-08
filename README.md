@@ -14,7 +14,9 @@ the quotes in it numbers over 3000 lines!
 
 ## Todo
 
-- Publish on `rubygems.org`.
+- Make a method that returns a quotes array.
+- Make a method that returns the same formatted array as before.
+    - Test each of them.
 
 ## Installation
 
