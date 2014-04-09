@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Qotd::VERSION
   spec.authors       = ["jfjhh"]
   spec.email         = ["alex.striff1@gmail.com"]
-  spec.summary       = "Displays a new quote on login to terminal."
-  spec.description   = "Gets a random quote from a file and displays it to the standard output."
+  spec.summary       = "Displays a quote to the terminal or web."
+  spec.description   = "Gets a random quote from a file and displays it to the terminal or in a Sinatra Application"
   spec.homepage      = "https://github.com/jfjhh/qotd"
   spec.license       = "MIT"
 
