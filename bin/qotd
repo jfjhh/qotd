@@ -1,22 +1,30 @@
 #!/usr/bin/env ruby
 
-# The first argument can be used as a quote to print, but if no arg is given,
-# print a random quote from the file.
+# The first argument can be used as a quote to print. If the arg is '--web',
+# then a Sinatra application will launch and display quotes on localhost:4567.
+# If no arguments given, rint a random quote from the quotes file.
 
 require 'qotd'
 
-puts "Quote of the Day:"
-
-quote = []
-if ARGV.first
-  quote = Format.format_quote(ARGV.first)
+if ARGV.first == "--web"
+  `open http://localhost:4567`
+  `ruby lib/qweb.rb`
 else
-  quote = Format.format_quote(Qotd.quote)
+
+  puts "Quote of the Day:"
+
+  quote = []
+  if ARGV.first
+    quote = Format.format_quote(ARGV.first)
+  else
+    quote = Format.format_quote(Qotd.quote)
+  end
+
+  last = quote.length - 1
+
+  print quote[0]
+  puts quote[(1...last)]
+  print quote[last]
+
 end
-
-last = quote.length - 1
-
-print quote[0]
-puts quote[(1...last)]
-print quote[last]
 
