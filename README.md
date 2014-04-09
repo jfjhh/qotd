@@ -14,9 +14,7 @@ the quotes in it numbers over 3000 lines!
 
 ## Todo
 
-- Qotd Sinatra application that periodically refreshes to display a quote.
-    - Make the CSS Pretty.
-    - Find a way to test it.
+- Find a way to test it.
 
 ## Installation
 
