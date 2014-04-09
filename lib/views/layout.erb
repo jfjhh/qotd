@@ -2,20 +2,22 @@
 	<head>
 		<title>Quote of the Day</title>
 		<link type="text/css" rel="stylesheet" href="default.css" />
-		<meta http-equiv="refresh" content="10" />
+		<meta http-equiv="refresh" content="60" />
 	</head>
 	<body>
-		<div id="page">
-			<div id="title">
-				<h1>Quote of the Day</h1>
+		<button type="button" onclick="history.go(0)">
+			<div id="page">
+				<div id="info">
+					<h2>Click to go to next quote.</h2>
+				</div>
+				<div id="title">
+					<h1>Quote of the Day</h1>
+				</div>
+				<div id="quote">
+					<%= yield %>
+				</div>
 			</div>
-			<div id="quote">
-				<%= yield %>
-			</div>
-			<div id="button">
-				<input type="button" onclick="history.go(0)" value="Refresh" />
-			</div>
-		</div>
+		</button>
 	</body>
 </html>
 
