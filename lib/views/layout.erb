@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Quote of the Day</title>
+		<link type="text/css" rel="stylesheet" href="default.css" />
+		<meta http-equiv="refresh" content="10" />
+	</head>
+	<body>
+		<div id="page">
+			<div id="title">
+				<h1>Quote of the Day</h1>
+			</div>
+			<div id="quote">
+				<%= yield %>
+			</div>
+			<div id="button">
+				<input type="button" onclick="history.go(0)" value="Refresh" />
+			</div>
+		</div>
+	</body>
+</html>
+
