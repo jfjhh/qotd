@@ -3,10 +3,10 @@ require_relative "spec_helper"
 describe "Qweb" do
   include Rack::Test::Methods
 
-  it "says hello world" do
+  it "loads the quote page" do
     get '/'
     expect(last_response).to be_ok
-    expect(last_response.body).to eq("Hello World!")
+    expect(last_response.body).to include("Quote of the Day")
   end
 
 end
