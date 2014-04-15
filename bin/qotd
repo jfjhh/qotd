@@ -5,10 +5,14 @@
 # If no arguments given, rint a random quote from the quotes file.
 
 require 'qotd'
+require 'qotd/version'
 
 if ARGV.first == "--web"
+  puts "=== RUUNNING QWEB ON localhost:4567 ==="
+  puts "=== WITH ruby #{Qotd::GEMDIR}/lib/qweb.rb ==="
+
   `open http://localhost:4567`
-  `ruby ../lib/qweb.rb`
+  `ruby #{Qotd::GEMDIR}/lib/qweb.rb`
 else
 
   puts "Quote of the Day:"
