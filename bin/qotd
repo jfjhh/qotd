@@ -8,7 +8,7 @@ require 'qotd'
 
 if ARGV.first == "--web"
   `open http://localhost:4567`
-  `ruby lib/qweb.rb`
+  `ruby ../lib/qweb.rb`
 else
 
   puts "Quote of the Day:"
