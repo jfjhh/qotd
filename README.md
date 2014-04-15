@@ -1,5 +1,6 @@
 # Qotd ~ Quote of the Day
 
+
 **Displays a random formatted quote from a massive compilation of hilarious quotes.**
 The output is either formatted in a terminal to always be spaced out to the 80th column, and the quote displayed with reversed foreground / background colors, or displayed in your browser with a Sinatra application on `localhost:4567`.
 
